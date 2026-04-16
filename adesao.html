@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SINPRF/RS · Plano Telemedicina Familiar</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg:#0a0e14;--surface:#111720;--surface2:#182030;--border:#1e2d42;
+  --text:#e2eaf5;--muted:#5a7299;--muted2:#8aa4c8;
+  --green:#00d68f;--green-dim:rgba(0,214,143,.12);--green-glow:rgba(0,214,143,.25);
+  --blue:#3b82f6;--blue-dim:rgba(59,130,246,.12);
+  --yellow:#f59e0b;--red:#ef4444;--r:14px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;min-height:100vh}
+body::before{content:'';position:fixed;inset:0;background:radial-gradient(ellipse 80% 60% at 50% -20%,rgba(59,130,246,.08),transparent 60%),radial-gradient(ellipse 60% 50% at 80% 110%,rgba(0,214,143,.07),transparent 60%);pointer-events:none}
+
+/* HERO */
+.hero{text-align:center;padding:48px 20px 32px;position:relative;z-index:1}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:var(--blue-dim);border:1px solid rgba(59,130,246,.3);border-radius:20px;padding:6px 14px;font-size:12px;font-family:'DM Mono',monospace;color:var(--muted2);margin-bottom:20px}
+.hero h1{font-family:'Bebas Neue',sans-serif;font-size:clamp(36px,8vw,64px);letter-spacing:2px;line-height:1;margin-bottom:12px}
+.hero h1 span{color:var(--green);text-shadow:0 0 30px var(--green-glow)}
+.hero p{font-size:16px;color:var(--muted2);max-width:480px;margin:0 auto 28px;line-height:1.6}
+
+/* BENEFÍCIOS */
+.beneficios{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-bottom:40px}
+.bene{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:12px 18px;text-align:center;min-width:130px}
+.bene-icon{font-size:24px;margin-bottom:4px}
+.bene-label{font-size:11px;color:var(--muted2);font-family:'DM Mono',monospace}
+.bene-val{font-weight:700;font-size:14px;margin-top:2px}
+
+/* PREÇO */
+.preco-box{background:linear-gradient(135deg,rgba(0,214,143,.1),rgba(59,130,246,.08));border:1px solid rgba(0,214,143,.3);border-radius:16px;padding:20px 28px;display:inline-flex;align-items:center;gap:20px;margin-bottom:40px}
+.preco-num{font-family:'Bebas Neue',sans-serif;font-size:52px;color:var(--green);text-shadow:0 0 30px var(--green-glow);line-height:1}
+.preco-info{text-align:left}
+.preco-info strong{display:block;font-size:15px;font-weight:700}
+.preco-info span{font-size:12px;color:var(--muted2)}
+
+/* FORM CONTAINER */
+.form-wrap{max-width:580px;margin:0 auto;padding:0 16px 60px;position:relative;z-index:1}
+
+/* STEP */
+.step{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);overflow:hidden;margin-bottom:16px}
+.step-head{padding:16px 20px;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:12px}
+.step-num{width:28px;height:28px;border-radius:50%;background:var(--blue-dim);border:1px solid rgba(59,130,246,.3);display:flex;align-items:center;justify-content:center;font-family:'DM Mono',monospace;font-size:12px;font-weight:500;color:var(--blue);flex-shrink:0}
+.step-num.done{background:var(--green-dim);border-color:rgba(0,214,143,.3);color:var(--green)}
+.step-title{font-weight:700;font-size:15px}
+.step-body{padding:20px}
+
+/* FORM ELEMENTS */
+.fg{margin-bottom:14px}
+label{display:block;font-size:11px;font-family:'DM Mono',monospace;color:var(--muted2);letter-spacing:.06em;text-transform:uppercase;margin-bottom:5px}
+input,select{width:100%;background:var(--surface2);border:1px solid var(--border);border-radius:9px;padding:11px 14px;color:var(--text);font-family:'DM Sans',sans-serif;font-size:14px;outline:none;transition:border-color .2s,box-shadow .2s}
+input:focus,select:focus{border-color:var(--blue);box-shadow:0 0 0 3px rgba(59,130,246,.12)}
+select option{background:var(--surface)}
+.fr2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+@media(max-width:480px){.fr2{grid-template-columns:1fr}}
+
+/* PRODUTO */
+.produto{background:linear-gradient(135deg,rgba(0,214,143,.07),rgba(59,130,246,.05));border:1px solid rgba(0,214,143,.25);border-radius:10px;padding:14px 16px;display:flex;align-items:center;justify-content:space-between;margin-bottom:16px}
+.prod-name{font-weight:700;font-size:14px}
+.prod-desc{font-size:12px;color:var(--muted2);margin-top:2px}
+.prod-price{font-family:'Bebas Neue',sans-serif;font-size:26px;color:var(--green);text-align:right}
+.prod-price small{display:block;font-family:'DM Sans',sans-serif;font-size:10px;color:var(--muted);font-weight:400}
+
+/* FAM ROW */
+.fam-row{background:var(--surface2);border:1px solid var(--border);border-radius:8px;padding:10px 14px;display:flex;align-items:center;justify-content:space-between;margin-bottom:6px;animation:up .25s ease}
+@keyframes up{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:translateY(0)}}
+.fam-name{font-size:13px;font-weight:600}
+.fam-sub{font-size:11px;color:var(--muted);margin-top:2px;font-family:'DM Mono',monospace}
+.btn-rem{background:rgba(239,68,68,.1);border:1px solid rgba(239,68,68,.25);color:var(--red);border-radius:6px;width:28px;height:28px;cursor:pointer;font-size:13px;display:flex;align-items:center;justify-content:center;transition:all .2s}
+.btn-rem:hover{background:rgba(239,68,68,.2)}
+
+/* TOTAL */
+.total-box{background:rgba(245,158,11,.08);border:1px solid rgba(245,158,11,.25);border-radius:8px;padding:12px 16px;display:flex;justify-content:space-between;align-items:center;margin-top:12px}
+.total-box .val{font-family:'Bebas Neue',sans-serif;font-size:24px;color:var(--yellow)}
+
+/* BUTTONS */
+.btn{width:100%;padding:14px;border:none;border-radius:10px;font-family:'DM Sans',sans-serif;font-weight:700;font-size:15px;cursor:pointer;transition:all .25s;display:flex;align-items:center;justify-content:center;gap:8px}
+.btn-add{background:var(--surface2);border:1px solid var(--border);color:var(--muted2);margin-bottom:4px}
+.btn-add:hover{border-color:var(--blue);color:var(--text)}
+.btn-submit{background:linear-gradient(135deg,#059669,var(--green));color:#000;font-weight:800;font-size:16px;box-shadow:0 4px 20px var(--green-glow);margin-top:8px}
+.btn-submit:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(0,214,143,.45)}
+.btn-submit:disabled{opacity:.5;cursor:not-allowed;transform:none}
+
+/* SUCESSO */
+.sucesso{text-align:center;padding:40px 20px;display:none}
+.sucesso-icon{font-size:64px;margin-bottom:16px;animation:pop .5s cubic-bezier(.34,1.56,.64,1)}
+@keyframes pop{from{transform:scale(0)}to{transform:scale(1)}}
+.sucesso h2{font-family:'Bebas Neue',sans-serif;font-size:32px;letter-spacing:2px;margin-bottom:8px;color:var(--green)}
+.sucesso p{color:var(--muted2);font-size:14px;line-height:1.6;max-width:360px;margin:0 auto}
+
+/* LOADING */
+.loading{display:none;text-align:center;padding:20px;color:var(--muted2);font-size:13px;font-family:'DM Mono',monospace}
+.spinner{display:inline-block;width:20px;height:20px;border:2px solid var(--border);border-top-color:var(--green);border-radius:50%;animation:spin .7s linear infinite;margin-right:8px;vertical-align:middle}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+/* CONFIG BANNER */
+.config-banner{background:rgba(239,68,68,.08);border:1px solid rgba(239,68,68,.25);border-radius:10px;padding:14px;text-align:center;margin-bottom:16px;font-size:13px;color:var(--red);display:none}
+
+hr{border:none;border-top:1px solid var(--border);margin:16px 0}
+
+/* FOOTER */
+footer{text-align:center;padding:20px;font-size:12px;color:var(--muted);font-family:'DM Mono',monospace;border-top:1px solid var(--border)}
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-badge">🚔 SINPRF/RS · Benefício Exclusivo PRF</div>
+  <h1>TELEMEDICINA<br><span>FAMILIAR</span></h1>
+  <p>Saúde para você e sua família com consultas médicas online, 24h por dia, 7 dias por semana.</p>
+
+  <div class="beneficios">
+    <div class="bene"><div class="bene-icon">👨‍⚕️</div><div class="bene-label">Consultas</div><div class="bene-val">Online 24h</div></div>
+    <div class="bene"><div class="bene-icon">👨‍👩‍👧</div><div class="bene-label">Cobertura</div><div class="bene-val">Família toda</div></div>
+    <div class="bene"><div class="bene-icon">💊</div><div class="bene-label">Receitas</div><div class="bene-val">Digitais</div></div>
+    <div class="bene"><div class="bene-icon">📱</div><div class="bene-label">Acesso</div><div class="bene-val">Pelo celular</div></div>
+  </div>
+
+  <div class="preco-box">
+    <div class="preco-num">R$19,90</div>
+    <div class="preco-info">
+      <strong>por pessoa / mês</strong>
+      <span>Inclua cônjuge, filhos, pais e sogros</span>
+    </div>
+  </div>
+</div>
+
+<!-- FORM -->
+<div class="form-wrap">
+
+  <div class="config-banner" id="banner-config">
+    ⚠️ Sistema em configuração. Entre em contato com a diretoria financeira do SINPRF/RS.
+  </div>
+
+  <div id="form-area">
+
+    <!-- STEP 1 -->
+    <div class="step">
+      <div class="step-head">
+        <div class="step-num" id="sn1">1</div>
+        <div class="step-title">Seus Dados (Policial Rodoviário Federal)</div>
+      </div>
+      <div class="step-body">
+        <div class="fg"><label>Nome Completo *</label><input id="nome" placeholder="Seu nome completo"></div>
+        <div class="fr2">
+          <div class="fg"><label>Matrícula PRF *</label><input id="mat" placeholder="Ex: 12345"></div>
+          <div class="fg"><label>CPF *</label><input id="cpf" placeholder="000.000.000-00" maxlength="14"></div>
+        </div>
+        <div class="fr2">
+          <div class="fg"><label>WhatsApp *</label><input id="tel" placeholder="(51) 99999-0000"></div>
+          <div class="fg"><label>E-mail *</label><input id="email" type="email" placeholder="seu@email.com"></div>
+        </div>
+        <div class="fg"><label>Lotação / UOP</label><input id="lot" placeholder="Ex: UOP Porto Alegre"></div>
+      </div>
+    </div>
+
+    <!-- STEP 2 -->
+    <div class="step">
+      <div class="step-head">
+        <div class="step-num" id="sn2">2</div>
+        <div class="step-title">Familiares que deseja incluir no plano</div>
+      </div>
+      <div class="step-body">
+        <div class="produto">
+          <div><div class="prod-name">🩺 Plano Telemedicina Familiar</div><div class="prod-desc">Consultas ilimitadas · Receitas digitais · 24h</div></div>
+          <div><div class="prod-price">R$19,90<small>/pessoa/mês</small></div></div>
+        </div>
+
+        <div class="fr2">
+          <div class="fg"><label>Nome do Familiar *</label><input id="fn" placeholder="Nome completo"></div>
+          <div class="fg"><label>Parentesco *</label>
+            <select id="fp">
+              <option value="">Selecione...</option>
+              <option>Cônjuge/Companheiro(a)</option>
+              <option>Filho(a)</option>
+              <option>Pai</option>
+              <option>Mãe</option>
+              <option>Sogro(a)</option>
+              <option>Outro</option>
+            </select>
+          </div>
+        </div>
+        <div class="fr2">
+          <div class="fg"><label>CPF do Familiar</label><input id="fc" placeholder="000.000.000-00" maxlength="14"></div>
+          <div class="fg"><label>Data de Nascimento</label><input id="fd" type="date"></div>
+        </div>
+
+        <button class="btn btn-add" onclick="addFam()">➕ Adicionar Familiar</button>
+
+        <div id="lista-fam"></div>
+
+        <div id="total-box" style="display:none">
+          <div class="total-box">
+            <span style="font-size:13px;color:var(--muted2)">Total mensal:</span>
+            <span class="val" id="total-val">R$ 0,00</span>
+          </div>
+          <div style="font-size:11px;color:var(--muted);text-align:right;margin-top:4px;font-family:'DM Mono',monospace">A cobrança será enviada mensalmente via PIX ou boleto</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- STEP 3 -->
+    <div class="step">
+      <div class="step-head">
+        <div class="step-num" id="sn3">3</div>
+        <div class="step-title">Forma de Pagamento Preferida</div>
+      </div>
+      <div class="step-body">
+        <div class="fg">
+          <label>Como prefere receber a cobrança mensal?</label>
+          <select id="forma">
+            <option value="pix">🟢 PIX (link no WhatsApp)</option>
+            <option value="boleto">📄 Boleto Bancário (por e-mail)</option>
+            <option value="folha">📋 Desconto em Folha de Pagamento</option>
+          </select>
+        </div>
+        <div id="aviso-pix" style="background:var(--green-dim);border:1px solid rgba(0,214,143,.2);border-radius:8px;padding:10px 14px;font-size:12px;color:var(--muted2);margin-top:4px">
+          📱 Você receberá o PIX mensalmente pelo WhatsApp informado acima.
+        </div>
+        <div id="aviso-boleto" style="display:none;background:var(--blue-dim);border:1px solid rgba(59,130,246,.2);border-radius:8px;padding:10px 14px;font-size:12px;color:var(--muted2);margin-top:4px">
+          📧 O boleto será enviado para o e-mail informado acima.
+        </div>
+        <div id="aviso-folha" style="display:none;background:rgba(245,158,11,.08);border:1px solid rgba(245,158,11,.2);border-radius:8px;padding:10px 14px;font-size:12px;color:var(--muted2);margin-top:4px">
+          📋 A diretoria financeira providenciará o desconto em folha.
+        </div>
+      </div>
+    </div>
+
+    <div class="loading" id="loading">
+      <span class="spinner"></span>Enviando sua adesão...
+    </div>
+
+    <button class="btn btn-submit" id="btn-enviar" onclick="enviar()">
+      ✅ Solicitar Adesão ao Plano
+    </button>
+
+    <p style="text-align:center;font-size:11px;color:var(--muted);margin-top:12px;font-family:'DM Mono',monospace">
+      Após o envio, a diretoria financeira do SINPRF/RS entrará em contato para confirmar.
+    </p>
+  </div>
+
+  <!-- SUCESSO -->
+  <div class="sucesso" id="sucesso">
+    <div class="sucesso-icon">🎉</div>
+    <h2>ADESÃO ENVIADA!</h2>
+    <p>Sua solicitação foi recebida com sucesso.<br>A diretoria financeira do SINPRF/RS entrará em contato em breve pelo WhatsApp para confirmar e enviar a cobrança.</p>
+    <br>
+    <p style="font-size:12px;color:var(--muted)">Dúvidas? Entre em contato com a diretoria financeira.</p>
+  </div>
+
+</div>
+
+<footer>SINPRF/RS · Sindicato dos Policiais Rodoviários Federais no Rio Grande do Sul</footer>
+
+<script>
+// ══════════════════════════════════════
+// CONFIGURAÇÃO — preencha após criar a conta JSONBin
+// ══════════════════════════════════════
+const JSONBIN_KEY  = '$2a$10$edm.kBGStd5r5AYCTRxJ.u5qwXwwjwaOj4BfGd0NDabbknXpuvsTW';
+const JSONBIN_BIN  = '69e1208faaba8821970802c3';
+const VALOR_MES    = 19.90;
+
+// ══════════════════════════════════════
+let familiares = [];
+
+// Máscara CPF
+function cpfMask(el) {
+  el.addEventListener('input', () => {
+    let v = el.value.replace(/\D/g,'').slice(0,11);
+    if(v.length>9) v=v.replace(/(\d{3})(\d{3})(\d{3})(\d{0,2})/,'$1.$2.$3-$4');
+    else if(v.length>6) v=v.replace(/(\d{3})(\d{3})(\d{0,3})/,'$1.$2.$3');
+    else if(v.length>3) v=v.replace(/(\d{3})(\d{0,3})/,'$1.$2');
+    el.value = v;
+  });
+}
+cpfMask(document.getElementById('cpf'));
+cpfMask(document.getElementById('fc'));
+
+// Aviso forma pagamento
+document.getElementById('forma').addEventListener('change', function() {
+  document.getElementById('aviso-pix').style.display = this.value==='pix'?'block':'none';
+  document.getElementById('aviso-boleto').style.display = this.value==='boleto'?'block':'none';
+  document.getElementById('aviso-folha').style.display = this.value==='folha'?'block':'none';
+});
+
+function addFam() {
+  const nome = document.getElementById('fn').value.trim();
+  const par  = document.getElementById('fp').value;
+  const cpf  = document.getElementById('fc').value.trim();
+  const nasc = document.getElementById('fd').value;
+  if (!nome || !par) { alert('Informe o nome e parentesco do familiar.'); return; }
+  familiares.push({ nome, par, cpf, nasc });
+  ['fn','fc','fd'].forEach(i => document.getElementById(i).value='');
+  document.getElementById('fp').value='';
+  renderFam();
+}
+
+function remFam(i) { familiares.splice(i,1); renderFam(); }
+
+function renderFam() {
+  const cont = document.getElementById('lista-fam');
+  const box  = document.getElementById('total-box');
+  if (!familiares.length) { cont.innerHTML=''; box.style.display='none'; return; }
+  box.style.display='block';
+  document.getElementById('total-val').textContent = 'R$ '+(familiares.length*VALOR_MES).toFixed(2).replace('.',',');
+  cont.innerHTML = familiares.map((f,i) => `
+    <div class="fam-row">
+      <div>
+        <div class="fam-name">${f.nome}</div>
+        <div class="fam-sub">${f.par}${f.cpf?' · '+f.cpf:''}${f.nasc?' · Nasc: '+f.nasc:''}</div>
+      </div>
+      <button class="btn-rem" onclick="remFam(${i})">✕</button>
+    </div>
+  `).join('');
+}
+
+async function enviar() {
+  // Valida campos obrigatórios
+  const nome  = document.getElementById('nome').value.trim();
+  const mat   = document.getElementById('mat').value.trim();
+  const cpf   = document.getElementById('cpf').value.trim();
+  const tel   = document.getElementById('tel').value.trim();
+  const email = document.getElementById('email').value.trim();
+  const lot   = document.getElementById('lot').value.trim();
+  const forma = document.getElementById('forma').value;
+
+  if (!nome||!mat||!cpf||!tel) {
+    alert('Preencha os campos obrigatórios: Nome, Matrícula, CPF e WhatsApp.');
+    return;
+  }
+  if (!familiares.length) {
+    alert('Adicione ao menos 1 familiar para aderir ao plano.');
+    return;
+  }
+
+  // Verifica se JSONBin está configurado
+  if (JSONBIN_KEY.includes('COLE') || JSONBIN_BIN.includes('COLE')) {
+    // Modo offline: simula envio e alerta admin
+    const dado = { id: Date.now(), nome, mat, cpf, tel, email, lot, familiares: [...familiares], forma, valor: familiares.length*VALOR_MES, status:'pendente', criado: new Date().toISOString() };
+    console.log('ADESÃO (sem JSONBin):', JSON.stringify(dado));
+    mostrarSucesso();
+    return;
+  }
+
+  document.getElementById('loading').style.display = 'block';
+  document.getElementById('btn-enviar').disabled = true;
+
+  try {
+    // Lê registros atuais
+    const getRes = await fetch(`https://api.jsonbin.io/v3/b/${JSONBIN_BIN}/latest`, {
+      headers: { 'X-Master-Key': JSONBIN_KEY }
+    });
+    const getData = await getRes.json();
+    const atual = getData.record || { sindicalizados: [] };
+
+    // Adiciona novo
+    const novo = {
+      id: Date.now(),
+      nome, mat, cpf, tel, email, lot,
+      familiares: [...familiares],
+      forma,
+      valor: familiares.length * VALOR_MES,
+      status: 'pendente',
+      criado: new Date().toISOString()
+    };
+    atual.sindicalizados.unshift(novo);
+
+    // Salva
+    await fetch(`https://api.jsonbin.io/v3/b/${JSONBIN_BIN}`, {
+      method: 'PUT',
+      headers: { 'Content-Type':'application/json', 'X-Master-Key': JSONBIN_KEY },
+      body: JSON.stringify(atual)
+    });
+
+    mostrarSucesso();
+  } catch(e) {
+    alert('Erro ao enviar. Tente novamente ou entre em contato com o sindicato.');
+    document.getElementById('btn-enviar').disabled = false;
+  }
+  document.getElementById('loading').style.display = 'none';
+}
+
+function mostrarSucesso() {
+  document.getElementById('form-area').style.display = 'none';
+  document.getElementById('sucesso').style.display = 'block';
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+</script>
+</body>
+</html>
