@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- saved from url=(0069)file:///C:/Users/Jo%C3%A3o%20Francisco/Downloads/adesao-download.html -->
+<!-- saved from url=(0062)file:///C:/Users/Jo%C3%A3o%20Francisco/Downloads/adesao_3.html -->
 <html lang="pt-BR"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -204,7 +204,7 @@ footer{text-align:center;padding:20px;font-size:12px;color:var(--muted);font-fam
         </div>
         <div class="fr2">
           <div class="fg"><label>CPF do Familiar *</label><input id="fc" placeholder="000.000.000-00" maxlength="14"></div>
-          <div class="fg"><label>Data de Nascimento</label><input id="fd" type="date"></div>
+          <div class="fg"><label>Data de Nascimento</label><input id="fd" type="text" placeholder="DD/MM/AAAA" maxlength="10" inputmode="numeric"></div>
         </div>
         <div class="fr2">
           <div class="fg"><label>Nº RG ou CNH *</label><input id="frg" placeholder="Ex: 1234567"></div>
@@ -314,6 +314,17 @@ function cpfMask(el) {
 }
 cpfMask(document.getElementById('cpf'));
 cpfMask(document.getElementById('fc'));
+
+// Máscara data DD/MM/AAAA
+function dateMask(el) {
+  el.addEventListener('input', () => {
+    let v = el.value.replace(/\D/g,'').slice(0,8);
+    if(v.length>4) v=v.replace(/(\d{2})(\d{2})(\d{0,4})/,'$1/$2/$3');
+    else if(v.length>2) v=v.replace(/(\d{2})(\d{0,2})/,'$1/$2');
+    el.value = v;
+  });
+}
+dateMask(document.getElementById('fd'));
 
 // Aviso forma pagamento
 document.getElementById('forma').addEventListener('change', function() {
