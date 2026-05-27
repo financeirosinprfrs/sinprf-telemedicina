@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- saved from url=(0075)file:///C:/Users/Jo%C3%A3o%20Francisco/Downloads/sinprf-telemedicina_5.html -->
+<!-- saved from url=(0056)file:///C:/Users/User/Downloads/sinprf-telemedicina.html -->
 <html lang="pt-BR"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -244,24 +244,24 @@ hr{border:none;border-top:1px solid var(--border);margin:16px 0}
   <button class="nav-btn" onclick="showPage(&#39;config&#39;)">⚙️ Config</button>
   <div class="nav-spacer"></div>
   <div class="nav-config">
-    <span style="font-size:11px;color:var(--muted);font-family:&#39;DM Mono&#39;,monospace" id="sync-status">🟢 Sincronizado · 17:37:02</span>
-    <span style="font-size:12px;color:var(--muted);font-family:&#39;DM Mono&#39;,monospace;margin-left:8px" id="nav-mes">Abril 2026</span>
+    <span style="font-size:11px;color:var(--muted);font-family:&#39;DM Mono&#39;,monospace" id="sync-status">🟢 Sincronizado · 15:25:22</span>
+    <span style="font-size:12px;color:var(--muted);font-family:&#39;DM Mono&#39;,monospace;margin-left:8px" id="nav-mes">Maio 2026</span>
     <div class="config-dot"></div>
   </div>
 </nav>
 
 <!-- ═══════════ DASHBOARD ═══════════ -->
 <div class="page active" id="page-dashboard">
-  <div class="sec-title">VISÃO GERAL · <span id="dash-mes-label">ABRIL 2026</span></div>
+  <div class="sec-title">VISÃO GERAL · <span id="dash-mes-label">MAIO 2026</span></div>
   <div class="g4" style="margin-bottom:16px">
     <div class="stat s-blue">
       <div class="stat-label">Sindicalizados</div>
-      <div class="stat-val blue" id="d-total">2</div>
+      <div class="stat-val blue" id="d-total">14</div>
       <div class="stat-sub">no plano telemedicina</div>
     </div>
     <div class="stat s-green">
       <div class="stat-label">Beneficiários</div>
-      <div class="stat-val green" id="d-benef">4</div>
+      <div class="stat-val green" id="d-benef">39</div>
       <div class="stat-sub">titulares + familiares</div>
     </div>
     <div class="stat s-green">
@@ -272,7 +272,7 @@ hr{border:none;border-top:1px solid var(--border);margin:16px 0}
     </div>
     <div class="stat s-red">
       <div class="stat-label">Inadimplentes</div>
-      <div class="stat-val red" id="d-inad">2</div>
+      <div class="stat-val red" id="d-inad">14</div>
       <div class="stat-sub">pendente / atrasado</div>
     </div>
   </div>
@@ -284,7 +284,7 @@ hr{border:none;border-top:1px solid var(--border);margin:16px 0}
     </div>
     <div class="stat s-yellow">
       <div class="stat-label">Valor Pendente (R$)</div>
-      <div class="stat-val yellow" id="d-pendente">39,80</div>
+      <div class="stat-val yellow" id="d-pendente">497,50</div>
       <div class="stat-sub">cobranças em aberto</div>
     </div>
   </div>
@@ -293,13 +293,28 @@ hr{border:none;border-top:1px solid var(--border);margin:16px 0}
       <div class="card-head"><div class="icon-box ib-red">🔴</div><h3>Inadimplentes — Ação Necessária</h3></div>
       <div class="card-body" id="d-lista-inad">
     <div style="display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid var(--border)">
-      <div><div style="font-size:13px;font-weight:500">Juliani de Campos Schafer</div><div style="font-size:11px;color:var(--muted);font-family:&#39;DM Mono&#39;,monospace">97519260097 · R$ 19,90/mês</div></div>
-      <button class="btn btn-wa btn-sm" onclick="abrirCobranca(DB.sindicalizados.find(x=&gt;x.id==1776365633331))">📱 Cobrar</button>
+      <div><div style="font-size:13px;font-weight:500">VANDRE LUIS KULCZYNSKI</div><div style="font-size:11px;color:var(--muted);font-family:&#39;DM Mono&#39;,monospace">1072836 · R$ 19,90/mês</div></div>
+      <button class="btn btn-wa btn-sm" onclick="abrirCobranca(DB.sindicalizados.find(x=&gt;x.id==1778611587648))">📱 Cobrar</button>
     </div>
   
     <div style="display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid var(--border)">
-      <div><div style="font-size:13px;font-weight:500">Eu</div><div style="font-size:11px;color:var(--muted);font-family:&#39;DM Mono&#39;,monospace">12235 · R$ 19,90/mês</div></div>
-      <button class="btn btn-wa btn-sm" onclick="abrirCobranca(DB.sindicalizados.find(x=&gt;x.id==1776364204514))">📱 Cobrar</button>
+      <div><div style="font-size:13px;font-weight:500">ELOI MAURI RIBAS RUCINSKI</div><div style="font-size:11px;color:var(--muted);font-family:&#39;DM Mono&#39;,monospace">2313536 · R$ 19,90/mês</div></div>
+      <button class="btn btn-wa btn-sm" onclick="abrirCobranca(DB.sindicalizados.find(x=&gt;x.id==1778507764550))">📱 Cobrar</button>
+    </div>
+  
+    <div style="display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid var(--border)">
+      <div><div style="font-size:13px;font-weight:500">ELOI MAURI RIBAS RUCINSKI</div><div style="font-size:11px;color:var(--muted);font-family:&#39;DM Mono&#39;,monospace">2313536 · R$ 39,80/mês</div></div>
+      <button class="btn btn-wa btn-sm" onclick="abrirCobranca(DB.sindicalizados.find(x=&gt;x.id==1778247375028))">📱 Cobrar</button>
+    </div>
+  
+    <div style="display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid var(--border)">
+      <div><div style="font-size:13px;font-weight:500">MAURICIO SOUZA SEIXAS</div><div style="font-size:11px;color:var(--muted);font-family:&#39;DM Mono&#39;,monospace">1371292 · R$ 39,80/mês</div></div>
+      <button class="btn btn-wa btn-sm" onclick="abrirCobranca(DB.sindicalizados.find(x=&gt;x.id==1777568323377))">📱 Cobrar</button>
+    </div>
+  
+    <div style="display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid var(--border)">
+      <div><div style="font-size:13px;font-weight:500">MAURICIO SOUZA SEIXAS</div><div style="font-size:11px;color:var(--muted);font-family:&#39;DM Mono&#39;,monospace">1371292 · R$ 39,80/mês</div></div>
+      <button class="btn btn-wa btn-sm" onclick="abrirCobranca(DB.sindicalizados.find(x=&gt;x.id==1777554456952))">📱 Cobrar</button>
     </div>
   </div>
     </div>
@@ -307,12 +322,27 @@ hr{border:none;border-top:1px solid var(--border);margin:16px 0}
       <div class="card-head"><div class="icon-box ib-green">✅</div><h3>Últimos Cadastrados</h3></div>
       <div class="card-body" id="d-lista-recentes">
     <div style="display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid var(--border)">
-      <div><div style="font-size:13px;font-weight:500">Juliani de Campos Schafer</div><div style="font-size:11px;color:var(--muted);font-family:&#39;DM Mono&#39;,monospace">1 familiar(es) · 16/04/2026</div></div>
+      <div><div style="font-size:13px;font-weight:500">VANDRE LUIS KULCZYNSKI</div><div style="font-size:11px;color:var(--muted);font-family:&#39;DM Mono&#39;,monospace">1 familiar(es) · 12/05/2026</div></div>
       <span class="badge b-yellow">● Pendente</span>
     </div>
   
     <div style="display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid var(--border)">
-      <div><div style="font-size:13px;font-weight:500">Eu</div><div style="font-size:11px;color:var(--muted);font-family:&#39;DM Mono&#39;,monospace">1 familiar(es) · 16/04/2026</div></div>
+      <div><div style="font-size:13px;font-weight:500">ELOI MAURI RIBAS RUCINSKI</div><div style="font-size:11px;color:var(--muted);font-family:&#39;DM Mono&#39;,monospace">1 familiar(es) · 11/05/2026</div></div>
+      <span class="badge b-yellow">● Pendente</span>
+    </div>
+  
+    <div style="display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid var(--border)">
+      <div><div style="font-size:13px;font-weight:500">ELOI MAURI RIBAS RUCINSKI</div><div style="font-size:11px;color:var(--muted);font-family:&#39;DM Mono&#39;,monospace">2 familiar(es) · 08/05/2026</div></div>
+      <span class="badge b-yellow">● Pendente</span>
+    </div>
+  
+    <div style="display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid var(--border)">
+      <div><div style="font-size:13px;font-weight:500">MAURICIO SOUZA SEIXAS</div><div style="font-size:11px;color:var(--muted);font-family:&#39;DM Mono&#39;,monospace">2 familiar(es) · 30/04/2026</div></div>
+      <span class="badge b-yellow">● Pendente</span>
+    </div>
+  
+    <div style="display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid var(--border)">
+      <div><div style="font-size:13px;font-weight:500">MAURICIO SOUZA SEIXAS</div><div style="font-size:11px;color:var(--muted);font-family:&#39;DM Mono&#39;,monospace">2 familiar(es) · 30/04/2026</div></div>
       <span class="badge b-yellow">● Pendente</span>
     </div>
   </div>
@@ -393,15 +423,15 @@ hr{border:none;border-top:1px solid var(--border);margin:16px 0}
       <div class="card-body">
         <div class="g3" style="margin-bottom:14px">
           <div style="background:var(--surface2);border:1px solid var(--border);border-radius:8px;padding:12px;text-align:center">
-            <div style="font-family:&#39;Bebas Neue&#39;,sans-serif;font-size:28px;color:var(--blue)" id="mini-total">2</div>
+            <div style="font-family:&#39;Bebas Neue&#39;,sans-serif;font-size:28px;color:var(--blue)" id="mini-total">14</div>
             <div style="font-size:11px;color:var(--muted);font-family:&#39;DM Mono&#39;,monospace">TITULARES</div>
           </div>
           <div style="background:var(--surface2);border:1px solid var(--border);border-radius:8px;padding:12px;text-align:center">
-            <div style="font-family:&#39;Bebas Neue&#39;,sans-serif;font-size:28px;color:var(--green)" id="mini-fam">2</div>
+            <div style="font-family:&#39;Bebas Neue&#39;,sans-serif;font-size:28px;color:var(--green)" id="mini-fam">25</div>
             <div style="font-size:11px;color:var(--muted);font-family:&#39;DM Mono&#39;,monospace">FAMILIARES</div>
           </div>
           <div style="background:var(--surface2);border:1px solid var(--border);border-radius:8px;padding:12px;text-align:center">
-            <div style="font-family:&#39;Bebas Neue&#39;,sans-serif;font-size:28px;color:var(--yellow)" id="mini-rec">R$40</div>
+            <div style="font-family:&#39;Bebas Neue&#39;,sans-serif;font-size:28px;color:var(--yellow)" id="mini-rec">R$497</div>
             <div style="font-size:11px;color:var(--muted);font-family:&#39;DM Mono&#39;,monospace">MENSAL</div>
           </div>
         </div>
@@ -410,6 +440,174 @@ hr{border:none;border-top:1px solid var(--border);margin:16px 0}
           <input id="busca-cad" placeholder="Buscar por nome, matrícula ou CPF..." oninput="renderSindList()">
         </div>
         <div id="sind-list-cad" style="max-height:500px;overflow-y:auto">
+    <div class="sind-row" onclick="verSind(1778611587648)">
+      <div class="sind-top">
+        <div class="sind-nome">VANDRE LUIS KULCZYNSKI</div>
+        <span class="badge b-yellow">● Pendente</span>
+      </div>
+      <div class="sind-meta">
+        <span>🪪 <b>1072836</b></span>
+        <span>👨‍👩‍👧 <b>1</b> familiar(es)</span>
+        <span>💰 <b>R$ 19,90</b>/mês</span>
+        <span>📅 <b>12/05/2026</b></span>
+      </div>
+      <div style="margin-top:6px"><span class="fam-chip">👤 ANITA</span></div>
+    </div>
+  
+    <div class="sind-row" onclick="verSind(1778507764550)">
+      <div class="sind-top">
+        <div class="sind-nome">ELOI MAURI RIBAS RUCINSKI</div>
+        <span class="badge b-yellow">● Pendente</span>
+      </div>
+      <div class="sind-meta">
+        <span>🪪 <b>2313536</b></span>
+        <span>👨‍👩‍👧 <b>1</b> familiar(es)</span>
+        <span>💰 <b>R$ 19,90</b>/mês</span>
+        <span>📅 <b>11/05/2026</b></span>
+      </div>
+      <div style="margin-top:6px"><span class="fam-chip">👤 Helder</span></div>
+    </div>
+  
+    <div class="sind-row" onclick="verSind(1778247375028)">
+      <div class="sind-top">
+        <div class="sind-nome">ELOI MAURI RIBAS RUCINSKI</div>
+        <span class="badge b-yellow">● Pendente</span>
+      </div>
+      <div class="sind-meta">
+        <span>🪪 <b>2313536</b></span>
+        <span>👨‍👩‍👧 <b>2</b> familiar(es)</span>
+        <span>💰 <b>R$ 39,80</b>/mês</span>
+        <span>📅 <b>08/05/2026</b></span>
+      </div>
+      <div style="margin-top:6px"><span class="fam-chip">👤 Suelen</span><span class="fam-chip">👤 Olvide</span></div>
+    </div>
+  
+    <div class="sind-row" onclick="verSind(1777568323377)">
+      <div class="sind-top">
+        <div class="sind-nome">MAURICIO SOUZA SEIXAS</div>
+        <span class="badge b-yellow">● Pendente</span>
+      </div>
+      <div class="sind-meta">
+        <span>🪪 <b>1371292</b></span>
+        <span>👨‍👩‍👧 <b>2</b> familiar(es)</span>
+        <span>💰 <b>R$ 39,80</b>/mês</span>
+        <span>📅 <b>30/04/2026</b></span>
+      </div>
+      <div style="margin-top:6px"><span class="fam-chip">👤 LUMA</span><span class="fam-chip">👤 MAURO</span></div>
+    </div>
+  
+    <div class="sind-row" onclick="verSind(1777554456952)">
+      <div class="sind-top">
+        <div class="sind-nome">MAURICIO SOUZA SEIXAS</div>
+        <span class="badge b-yellow">● Pendente</span>
+      </div>
+      <div class="sind-meta">
+        <span>🪪 <b>1371292</b></span>
+        <span>👨‍👩‍👧 <b>2</b> familiar(es)</span>
+        <span>💰 <b>R$ 39,80</b>/mês</span>
+        <span>📅 <b>30/04/2026</b></span>
+      </div>
+      <div style="margin-top:6px"><span class="fam-chip">👤 LUMA</span><span class="fam-chip">👤 MAURO</span></div>
+    </div>
+  
+    <div class="sind-row" onclick="verSind(1777484270251)">
+      <div class="sind-top">
+        <div class="sind-nome">JOAO PAULO DE OLIVEIRA AGUIAR</div>
+        <span class="badge b-yellow">● Pendente</span>
+      </div>
+      <div class="sind-meta">
+        <span>🪪 <b>3247586</b></span>
+        <span>👨‍👩‍👧 <b>3</b> familiar(es)</span>
+        <span>💰 <b>R$ 59,70</b>/mês</span>
+        <span>📅 <b>29/04/2026</b></span>
+      </div>
+      <div style="margin-top:6px"><span class="fam-chip">👤 RENATA</span><span class="fam-chip">👤 ROSANGELA</span><span class="fam-chip">👤 IGOR</span></div>
+    </div>
+  
+    <div class="sind-row" onclick="verSind(1777067144103)">
+      <div class="sind-top">
+        <div class="sind-nome">Carlos Roberto Rodrigues Teles</div>
+        <span class="badge b-yellow">● Pendente</span>
+      </div>
+      <div class="sind-meta">
+        <span>🪪 <b>0165858</b></span>
+        <span>👨‍👩‍👧 <b>3</b> familiar(es)</span>
+        <span>💰 <b>R$ 59,70</b>/mês</span>
+        <span>📅 <b>24/04/2026</b></span>
+      </div>
+      <div style="margin-top:6px"><span class="fam-chip">👤 Roselaine</span><span class="fam-chip">👤 Valdomario</span><span class="fam-chip">👤 Ana</span></div>
+    </div>
+  
+    <div class="sind-row" onclick="verSind(1777033991931)">
+      <div class="sind-top">
+        <div class="sind-nome">Mauricio souza seixas</div>
+        <span class="badge b-yellow">● Pendente</span>
+      </div>
+      <div class="sind-meta">
+        <span>🪪 <b>1371292</b></span>
+        <span>👨‍👩‍👧 <b>1</b> familiar(es)</span>
+        <span>💰 <b>R$ 19,90</b>/mês</span>
+        <span>📅 <b>24/04/2026</b></span>
+      </div>
+      <div style="margin-top:6px"><span class="fam-chip">👤 Mauro</span></div>
+    </div>
+  
+    <div class="sind-row" onclick="verSind(1777033254006)">
+      <div class="sind-top">
+        <div class="sind-nome">Mauricio souza seixas</div>
+        <span class="badge b-yellow">● Pendente</span>
+      </div>
+      <div class="sind-meta">
+        <span>🪪 <b>1371292</b></span>
+        <span>👨‍👩‍👧 <b>1</b> familiar(es)</span>
+        <span>💰 <b>R$ 19,90</b>/mês</span>
+        <span>📅 <b>24/04/2026</b></span>
+      </div>
+      <div style="margin-top:6px"><span class="fam-chip">👤 Luma</span></div>
+    </div>
+  
+    <div class="sind-row" onclick="verSind(1777032878195)">
+      <div class="sind-top">
+        <div class="sind-nome">Mauricio souza seixas</div>
+        <span class="badge b-yellow">● Pendente</span>
+      </div>
+      <div class="sind-meta">
+        <span>🪪 <b>1371292</b></span>
+        <span>👨‍👩‍👧 <b>1</b> familiar(es)</span>
+        <span>💰 <b>R$ 19,90</b>/mês</span>
+        <span>📅 <b>24/04/2026</b></span>
+      </div>
+      <div style="margin-top:6px"><span class="fam-chip">👤 Luciane</span></div>
+    </div>
+  
+    <div class="sind-row" onclick="verSind(1776955334599)">
+      <div class="sind-top">
+        <div class="sind-nome">CLEIMAR PEREIRA DE OLIVEIRA</div>
+        <span class="badge b-yellow">● Pendente</span>
+      </div>
+      <div class="sind-meta">
+        <span>🪪 <b>1481305</b></span>
+        <span>👨‍👩‍👧 <b>2</b> familiar(es)</span>
+        <span>💰 <b>R$ 39,80</b>/mês</span>
+        <span>📅 <b>23/04/2026</b></span>
+      </div>
+      <div style="margin-top:6px"><span class="fam-chip">👤 MARISA</span><span class="fam-chip">👤 JULIA</span></div>
+    </div>
+  
+    <div class="sind-row" onclick="verSind(1776425640020)">
+      <div class="sind-top">
+        <div class="sind-nome">FRANCO RIBEIRO MATIAS</div>
+        <span class="badge b-yellow">● Pendente</span>
+      </div>
+      <div class="sind-meta">
+        <span>🪪 <b>2151425</b></span>
+        <span>👨‍👩‍👧 <b>4</b> familiar(es)</span>
+        <span>💰 <b>R$ 79,60</b>/mês</span>
+        <span>📅 <b>17/04/2026</b></span>
+      </div>
+      <div style="margin-top:6px"><span class="fam-chip">👤 LOUISE</span><span class="fam-chip">👤 MARIA</span><span class="fam-chip">👤 MARIZA</span><span class="fam-chip">👤 THAYSE</span></div>
+    </div>
+  
     <div class="sind-row" onclick="verSind(1776365633331)">
       <div class="sind-top">
         <div class="sind-nome">Juliani de Campos Schafer</div>
@@ -470,6 +668,259 @@ hr{border:none;border-top:1px solid var(--border);margin:16px 0}
           </tr></thead>
           <tbody id="tbl-benef"><tr>
         <td style="color:var(--muted);font-family:&#39;DM Mono&#39;,monospace">1</td>
+        <td><strong>ANITA CARUS PANDOLFO</strong></td>
+        <td style="font-family:&#39;DM Mono&#39;,monospace;font-size:12px">715.567.020-00</td>
+        <td><span class="b-blue">Familiar</span></td>
+        <td style="font-size:12px;color:var(--muted2)">Sogro(a)</td>
+        <td>VANDRE LUIS KULCZYNSKI</td>
+        <td style="font-family:&#39;DM Mono&#39;,monospace">1072836</td>
+        <td style="font-family:&#39;DM Mono&#39;,monospace;color:var(--green)">R$ 19,90</td>
+        <td><span class="badge b-yellow">● Pendente</span></td>
+        <td><button class="btn btn-ghost btn-sm" onclick="verSind(1778611587648)">Ver</button></td>
+      </tr><tr>
+        <td style="color:var(--muted);font-family:&#39;DM Mono&#39;,monospace">2</td>
+        <td><strong>Helder Baldissarelli</strong></td>
+        <td style="font-family:&#39;DM Mono&#39;,monospace;font-size:12px">976.370.760-91</td>
+        <td><span class="b-blue">Familiar</span></td>
+        <td style="font-size:12px;color:var(--muted2)">Outro</td>
+        <td>ELOI MAURI RIBAS RUCINSKI</td>
+        <td style="font-family:&#39;DM Mono&#39;,monospace">2313536</td>
+        <td style="font-family:&#39;DM Mono&#39;,monospace;color:var(--green)">R$ 19,90</td>
+        <td><span class="badge b-yellow">● Pendente</span></td>
+        <td><button class="btn btn-ghost btn-sm" onclick="verSind(1778507764550)">Ver</button></td>
+      </tr><tr>
+        <td style="color:var(--muted);font-family:&#39;DM Mono&#39;,monospace">3</td>
+        <td><strong>Suelen Brandelli Rucinski</strong></td>
+        <td style="font-family:&#39;DM Mono&#39;,monospace;font-size:12px">832.047.840-53</td>
+        <td><span class="b-blue">Familiar</span></td>
+        <td style="font-size:12px;color:var(--muted2)">Cônjuge/Companheiro(a)</td>
+        <td>ELOI MAURI RIBAS RUCINSKI</td>
+        <td style="font-family:&#39;DM Mono&#39;,monospace">2313536</td>
+        <td style="font-family:&#39;DM Mono&#39;,monospace;color:var(--green)">R$ 19,90</td>
+        <td><span class="badge b-yellow">● Pendente</span></td>
+        <td><button class="btn btn-ghost btn-sm" onclick="verSind(1778247375028)">Ver</button></td>
+      </tr><tr>
+        <td style="color:var(--muted);font-family:&#39;DM Mono&#39;,monospace">4</td>
+        <td><strong>Olvide Adélia Mella</strong></td>
+        <td style="font-family:&#39;DM Mono&#39;,monospace;font-size:12px">198.723.640-87</td>
+        <td><span class="b-blue">Familiar</span></td>
+        <td style="font-size:12px;color:var(--muted2)">Sogro(a)</td>
+        <td>ELOI MAURI RIBAS RUCINSKI</td>
+        <td style="font-family:&#39;DM Mono&#39;,monospace">2313536</td>
+        <td style="font-family:&#39;DM Mono&#39;,monospace;color:var(--green)">R$ 19,90</td>
+        <td><span class="badge b-yellow">● Pendente</span></td>
+        <td><button class="btn btn-ghost btn-sm" onclick="verSind(1778247375028)">Ver</button></td>
+      </tr><tr>
+        <td style="color:var(--muted);font-family:&#39;DM Mono&#39;,monospace">5</td>
+        <td><strong>LUMA ESCALART TOLENTINO SEIXAS</strong></td>
+        <td style="font-family:&#39;DM Mono&#39;,monospace;font-size:12px">091.771.909-39</td>
+        <td><span class="b-blue">Familiar</span></td>
+        <td style="font-size:12px;color:var(--muted2)">Filho(a)</td>
+        <td>MAURICIO SOUZA SEIXAS</td>
+        <td style="font-family:&#39;DM Mono&#39;,monospace">1371292</td>
+        <td style="font-family:&#39;DM Mono&#39;,monospace;color:var(--green)">R$ 19,90</td>
+        <td><span class="badge b-yellow">● Pendente</span></td>
+        <td><button class="btn btn-ghost btn-sm" onclick="verSind(1777568323377)">Ver</button></td>
+      </tr><tr>
+        <td style="color:var(--muted);font-family:&#39;DM Mono&#39;,monospace">6</td>
+        <td><strong>MAURO DALVIM TOLENTINO SEIXAS</strong></td>
+        <td style="font-family:&#39;DM Mono&#39;,monospace;font-size:12px">121.481.749-16</td>
+        <td><span class="b-blue">Familiar</span></td>
+        <td style="font-size:12px;color:var(--muted2)">Filho(a)</td>
+        <td>MAURICIO SOUZA SEIXAS</td>
+        <td style="font-family:&#39;DM Mono&#39;,monospace">1371292</td>
+        <td style="font-family:&#39;DM Mono&#39;,monospace;color:var(--green)">R$ 19,90</td>
+        <td><span class="badge b-yellow">● Pendente</span></td>
+        <td><button class="btn btn-ghost btn-sm" onclick="verSind(1777568323377)">Ver</button></td>
+      </tr><tr>
+        <td style="color:var(--muted);font-family:&#39;DM Mono&#39;,monospace">7</td>
+        <td><strong>LUMA ESCALAT TOLENTINO SEIXAS</strong></td>
+        <td style="font-family:&#39;DM Mono&#39;,monospace;font-size:12px">091.771.909-39</td>
+        <td><span class="b-blue">Familiar</span></td>
+        <td style="font-size:12px;color:var(--muted2)">Filho(a)</td>
+        <td>MAURICIO SOUZA SEIXAS</td>
+        <td style="font-family:&#39;DM Mono&#39;,monospace">1371292</td>
+        <td style="font-family:&#39;DM Mono&#39;,monospace;color:var(--green)">R$ 19,90</td>
+        <td><span class="badge b-yellow">● Pendente</span></td>
+        <td><button class="btn btn-ghost btn-sm" onclick="verSind(1777554456952)">Ver</button></td>
+      </tr><tr>
+        <td style="color:var(--muted);font-family:&#39;DM Mono&#39;,monospace">8</td>
+        <td><strong>MAURO DALVIM TOLENTINO SEIXAS</strong></td>
+        <td style="font-family:&#39;DM Mono&#39;,monospace;font-size:12px">121.481.749-16</td>
+        <td><span class="b-blue">Familiar</span></td>
+        <td style="font-size:12px;color:var(--muted2)">Filho(a)</td>
+        <td>MAURICIO SOUZA SEIXAS</td>
+        <td style="font-family:&#39;DM Mono&#39;,monospace">1371292</td>
+        <td style="font-family:&#39;DM Mono&#39;,monospace;color:var(--green)">R$ 19,90</td>
+        <td><span class="badge b-yellow">● Pendente</span></td>
+        <td><button class="btn btn-ghost btn-sm" onclick="verSind(1777554456952)">Ver</button></td>
+      </tr><tr>
+        <td style="color:var(--muted);font-family:&#39;DM Mono&#39;,monospace">9</td>
+        <td><strong>RENATA CORTEZ</strong></td>
+        <td style="font-family:&#39;DM Mono&#39;,monospace;font-size:12px">062.952.166-25</td>
+        <td><span class="b-blue">Familiar</span></td>
+        <td style="font-size:12px;color:var(--muted2)">Cônjuge/Companheiro(a)</td>
+        <td>JOAO PAULO DE OLIVEIRA AGUIAR</td>
+        <td style="font-family:&#39;DM Mono&#39;,monospace">3247586</td>
+        <td style="font-family:&#39;DM Mono&#39;,monospace;color:var(--green)">R$ 19,90</td>
+        <td><span class="badge b-yellow">● Pendente</span></td>
+        <td><button class="btn btn-ghost btn-sm" onclick="verSind(1777484270251)">Ver</button></td>
+      </tr><tr>
+        <td style="color:var(--muted);font-family:&#39;DM Mono&#39;,monospace">10</td>
+        <td><strong>ROSANGELA MARIA DE OLIVEIRA</strong></td>
+        <td style="font-family:&#39;DM Mono&#39;,monospace;font-size:12px">370.750.476-04</td>
+        <td><span class="b-blue">Familiar</span></td>
+        <td style="font-size:12px;color:var(--muted2)">Mãe</td>
+        <td>JOAO PAULO DE OLIVEIRA AGUIAR</td>
+        <td style="font-family:&#39;DM Mono&#39;,monospace">3247586</td>
+        <td style="font-family:&#39;DM Mono&#39;,monospace;color:var(--green)">R$ 19,90</td>
+        <td><span class="badge b-yellow">● Pendente</span></td>
+        <td><button class="btn btn-ghost btn-sm" onclick="verSind(1777484270251)">Ver</button></td>
+      </tr><tr>
+        <td style="color:var(--muted);font-family:&#39;DM Mono&#39;,monospace">11</td>
+        <td><strong>IGOR MARTINEZ OLIVEIRA PEDROSA</strong></td>
+        <td style="font-family:&#39;DM Mono&#39;,monospace;font-size:12px">113.739.726-88</td>
+        <td><span class="b-blue">Familiar</span></td>
+        <td style="font-size:12px;color:var(--muted2)">Outro</td>
+        <td>JOAO PAULO DE OLIVEIRA AGUIAR</td>
+        <td style="font-family:&#39;DM Mono&#39;,monospace">3247586</td>
+        <td style="font-family:&#39;DM Mono&#39;,monospace;color:var(--green)">R$ 19,90</td>
+        <td><span class="badge b-yellow">● Pendente</span></td>
+        <td><button class="btn btn-ghost btn-sm" onclick="verSind(1777484270251)">Ver</button></td>
+      </tr><tr>
+        <td style="color:var(--muted);font-family:&#39;DM Mono&#39;,monospace">12</td>
+        <td><strong>Roselaine Moreira Dipp dos Santos</strong></td>
+        <td style="font-family:&#39;DM Mono&#39;,monospace;font-size:12px">998.475.310-72</td>
+        <td><span class="b-blue">Familiar</span></td>
+        <td style="font-size:12px;color:var(--muted2)">Cônjuge/Companheiro(a)</td>
+        <td>Carlos Roberto Rodrigues Teles</td>
+        <td style="font-family:&#39;DM Mono&#39;,monospace">0165858</td>
+        <td style="font-family:&#39;DM Mono&#39;,monospace;color:var(--green)">R$ 19,90</td>
+        <td><span class="badge b-yellow">● Pendente</span></td>
+        <td><button class="btn btn-ghost btn-sm" onclick="verSind(1777067144103)">Ver</button></td>
+      </tr><tr>
+        <td style="color:var(--muted);font-family:&#39;DM Mono&#39;,monospace">13</td>
+        <td><strong>Valdomario Silva dos Santos</strong></td>
+        <td style="font-family:&#39;DM Mono&#39;,monospace;font-size:12px">210.812.470-53</td>
+        <td><span class="b-blue">Familiar</span></td>
+        <td style="font-size:12px;color:var(--muted2)">Sogro(a)</td>
+        <td>Carlos Roberto Rodrigues Teles</td>
+        <td style="font-family:&#39;DM Mono&#39;,monospace">0165858</td>
+        <td style="font-family:&#39;DM Mono&#39;,monospace;color:var(--green)">R$ 19,90</td>
+        <td><span class="badge b-yellow">● Pendente</span></td>
+        <td><button class="btn btn-ghost btn-sm" onclick="verSind(1777067144103)">Ver</button></td>
+      </tr><tr>
+        <td style="color:var(--muted);font-family:&#39;DM Mono&#39;,monospace">14</td>
+        <td><strong>Ana Júlia Dipp Teles</strong></td>
+        <td style="font-family:&#39;DM Mono&#39;,monospace;font-size:12px">066.406.650-00</td>
+        <td><span class="b-blue">Familiar</span></td>
+        <td style="font-size:12px;color:var(--muted2)">Filho(a)</td>
+        <td>Carlos Roberto Rodrigues Teles</td>
+        <td style="font-family:&#39;DM Mono&#39;,monospace">0165858</td>
+        <td style="font-family:&#39;DM Mono&#39;,monospace;color:var(--green)">R$ 19,90</td>
+        <td><span class="badge b-yellow">● Pendente</span></td>
+        <td><button class="btn btn-ghost btn-sm" onclick="verSind(1777067144103)">Ver</button></td>
+      </tr><tr>
+        <td style="color:var(--muted);font-family:&#39;DM Mono&#39;,monospace">15</td>
+        <td><strong>Mauro Dalvim Tolentino Seixas</strong></td>
+        <td style="font-family:&#39;DM Mono&#39;,monospace;font-size:12px">121.481.749-15</td>
+        <td><span class="b-blue">Familiar</span></td>
+        <td style="font-size:12px;color:var(--muted2)">Filho(a)</td>
+        <td>Mauricio souza seixas</td>
+        <td style="font-family:&#39;DM Mono&#39;,monospace">1371292</td>
+        <td style="font-family:&#39;DM Mono&#39;,monospace;color:var(--green)">R$ 19,90</td>
+        <td><span class="badge b-yellow">● Pendente</span></td>
+        <td><button class="btn btn-ghost btn-sm" onclick="verSind(1777033991931)">Ver</button></td>
+      </tr><tr>
+        <td style="color:var(--muted);font-family:&#39;DM Mono&#39;,monospace">16</td>
+        <td><strong>Luma Escalart Tolentino Seixas</strong></td>
+        <td style="font-family:&#39;DM Mono&#39;,monospace;font-size:12px">091.771.909-39</td>
+        <td><span class="b-blue">Familiar</span></td>
+        <td style="font-size:12px;color:var(--muted2)">Filho(a)</td>
+        <td>Mauricio souza seixas</td>
+        <td style="font-family:&#39;DM Mono&#39;,monospace">1371292</td>
+        <td style="font-family:&#39;DM Mono&#39;,monospace;color:var(--green)">R$ 19,90</td>
+        <td><span class="badge b-yellow">● Pendente</span></td>
+        <td><button class="btn btn-ghost btn-sm" onclick="verSind(1777033254006)">Ver</button></td>
+      </tr><tr>
+        <td style="color:var(--muted);font-family:&#39;DM Mono&#39;,monospace">17</td>
+        <td><strong>Luciane De Souza Tolentino Seixas</strong></td>
+        <td style="font-family:&#39;DM Mono&#39;,monospace;font-size:12px">000.286.040-67</td>
+        <td><span class="b-blue">Familiar</span></td>
+        <td style="font-size:12px;color:var(--muted2)">Cônjuge/Companheiro(a)</td>
+        <td>Mauricio souza seixas</td>
+        <td style="font-family:&#39;DM Mono&#39;,monospace">1371292</td>
+        <td style="font-family:&#39;DM Mono&#39;,monospace;color:var(--green)">R$ 19,90</td>
+        <td><span class="badge b-yellow">● Pendente</span></td>
+        <td><button class="btn btn-ghost btn-sm" onclick="verSind(1777032878195)">Ver</button></td>
+      </tr><tr>
+        <td style="color:var(--muted);font-family:&#39;DM Mono&#39;,monospace">18</td>
+        <td><strong>MARISA FERNANDA RODRIGUES DE CASTRO OLIVEIRA</strong></td>
+        <td style="font-family:&#39;DM Mono&#39;,monospace;font-size:12px">457.248.570-49</td>
+        <td><span class="b-blue">Familiar</span></td>
+        <td style="font-size:12px;color:var(--muted2)">Cônjuge/Companheiro(a)</td>
+        <td>CLEIMAR PEREIRA DE OLIVEIRA</td>
+        <td style="font-family:&#39;DM Mono&#39;,monospace">1481305</td>
+        <td style="font-family:&#39;DM Mono&#39;,monospace;color:var(--green)">R$ 19,90</td>
+        <td><span class="badge b-yellow">● Pendente</span></td>
+        <td><button class="btn btn-ghost btn-sm" onclick="verSind(1776955334599)">Ver</button></td>
+      </tr><tr>
+        <td style="color:var(--muted);font-family:&#39;DM Mono&#39;,monospace">19</td>
+        <td><strong>JULIA DE CASTRO SARAÇOL</strong></td>
+        <td style="font-family:&#39;DM Mono&#39;,monospace;font-size:12px">851.570.900-72</td>
+        <td><span class="b-blue">Familiar</span></td>
+        <td style="font-size:12px;color:var(--muted2)">Outro</td>
+        <td>CLEIMAR PEREIRA DE OLIVEIRA</td>
+        <td style="font-family:&#39;DM Mono&#39;,monospace">1481305</td>
+        <td style="font-family:&#39;DM Mono&#39;,monospace;color:var(--green)">R$ 19,90</td>
+        <td><span class="badge b-yellow">● Pendente</span></td>
+        <td><button class="btn btn-ghost btn-sm" onclick="verSind(1776955334599)">Ver</button></td>
+      </tr><tr>
+        <td style="color:var(--muted);font-family:&#39;DM Mono&#39;,monospace">20</td>
+        <td><strong>LOUISE DE OLIVEIRA FERREIRA MALTA</strong></td>
+        <td style="font-family:&#39;DM Mono&#39;,monospace;font-size:12px">110.165.084-25</td>
+        <td><span class="b-blue">Familiar</span></td>
+        <td style="font-size:12px;color:var(--muted2)">Cônjuge/Companheiro(a)</td>
+        <td>FRANCO RIBEIRO MATIAS</td>
+        <td style="font-family:&#39;DM Mono&#39;,monospace">2151425</td>
+        <td style="font-family:&#39;DM Mono&#39;,monospace;color:var(--green)">R$ 19,90</td>
+        <td><span class="badge b-yellow">● Pendente</span></td>
+        <td><button class="btn btn-ghost btn-sm" onclick="verSind(1776425640020)">Ver</button></td>
+      </tr><tr>
+        <td style="color:var(--muted);font-family:&#39;DM Mono&#39;,monospace">21</td>
+        <td><strong>MARIA ONDINA NETTO RIBEIRO</strong></td>
+        <td style="font-family:&#39;DM Mono&#39;,monospace;font-size:12px">353.034.920-87</td>
+        <td><span class="b-blue">Familiar</span></td>
+        <td style="font-size:12px;color:var(--muted2)">Outro</td>
+        <td>FRANCO RIBEIRO MATIAS</td>
+        <td style="font-family:&#39;DM Mono&#39;,monospace">2151425</td>
+        <td style="font-family:&#39;DM Mono&#39;,monospace;color:var(--green)">R$ 19,90</td>
+        <td><span class="badge b-yellow">● Pendente</span></td>
+        <td><button class="btn btn-ghost btn-sm" onclick="verSind(1776425640020)">Ver</button></td>
+      </tr><tr>
+        <td style="color:var(--muted);font-family:&#39;DM Mono&#39;,monospace">22</td>
+        <td><strong>MARIZA RIBEIRO</strong></td>
+        <td style="font-family:&#39;DM Mono&#39;,monospace;font-size:12px">261.739.800-53</td>
+        <td><span class="b-blue">Familiar</span></td>
+        <td style="font-size:12px;color:var(--muted2)">Mãe</td>
+        <td>FRANCO RIBEIRO MATIAS</td>
+        <td style="font-family:&#39;DM Mono&#39;,monospace">2151425</td>
+        <td style="font-family:&#39;DM Mono&#39;,monospace;color:var(--green)">R$ 19,90</td>
+        <td><span class="badge b-yellow">● Pendente</span></td>
+        <td><button class="btn btn-ghost btn-sm" onclick="verSind(1776425640020)">Ver</button></td>
+      </tr><tr>
+        <td style="color:var(--muted);font-family:&#39;DM Mono&#39;,monospace">23</td>
+        <td><strong>THAYSE DE OLIVEIRA FERREIRA DORTA</strong></td>
+        <td style="font-family:&#39;DM Mono&#39;,monospace;font-size:12px">047.206.964-06</td>
+        <td><span class="b-blue">Familiar</span></td>
+        <td style="font-size:12px;color:var(--muted2)">Sogro(a)</td>
+        <td>FRANCO RIBEIRO MATIAS</td>
+        <td style="font-family:&#39;DM Mono&#39;,monospace">2151425</td>
+        <td style="font-family:&#39;DM Mono&#39;,monospace;color:var(--green)">R$ 19,90</td>
+        <td><span class="badge b-yellow">● Pendente</span></td>
+        <td><button class="btn btn-ghost btn-sm" onclick="verSind(1776425640020)">Ver</button></td>
+      </tr><tr>
+        <td style="color:var(--muted);font-family:&#39;DM Mono&#39;,monospace">24</td>
         <td><strong>Juliani de Campos Schafer</strong></td>
         <td style="font-family:&#39;DM Mono&#39;,monospace;font-size:12px">975.192.600-97</td>
         <td><span class="b-blue">Familiar</span></td>
@@ -480,7 +931,7 @@ hr{border:none;border-top:1px solid var(--border);margin:16px 0}
         <td><span class="badge b-yellow">● Pendente</span></td>
         <td><button class="btn btn-ghost btn-sm" onclick="verSind(1776365633331)">Ver</button></td>
       </tr><tr>
-        <td style="color:var(--muted);font-family:&#39;DM Mono&#39;,monospace">2</td>
+        <td style="color:var(--muted);font-family:&#39;DM Mono&#39;,monospace">25</td>
         <td><strong>Eu</strong></td>
         <td style="font-family:&#39;DM Mono&#39;,monospace;font-size:12px">727.488.949-99</td>
         <td><span class="b-blue">Familiar</span></td>
@@ -493,7 +944,7 @@ hr{border:none;border-top:1px solid var(--border);margin:16px 0}
       </tr></tbody>
         </table>
       </div>
-      <div style="margin-top:12px;font-size:12px;color:var(--muted);font-family:&#39;DM Mono&#39;,monospace" id="benef-count">2 beneficiário(s) encontrado(s)</div>
+      <div style="margin-top:12px;font-size:12px;color:var(--muted);font-family:&#39;DM Mono&#39;,monospace" id="benef-count">25 beneficiário(s) encontrado(s)</div>
     </div>
   </div>
 </div>
@@ -506,7 +957,7 @@ hr{border:none;border-top:1px solid var(--border);margin:16px 0}
       <div class="card-body">
         <div class="month-select">
           <span style="font-size:13px;color:var(--muted2)">Competência:</span>
-          <select id="cobr-mes" onchange="renderCobr()"><option value="2026-07">Julho 2026</option><option value="2026-06">Junho 2026</option><option value="2026-05">Maio 2026</option><option value="2026-04">Abril 2026</option><option value="2026-03">Março 2026</option><option value="2026-02">Fevereiro 2026</option><option value="2026-01">Janeiro 2026</option><option value="2025-12">Dezembro 2025</option><option value="2025-11">Novembro 2025</option><option value="2025-10">Outubro 2025</option><option value="2025-09">Setembro 2025</option><option value="2025-08">Agosto 2025</option><option value="2025-07">Julho 2025</option><option value="2025-06">Junho 2025</option><option value="2025-05">Maio 2025</option></select>
+          <select id="cobr-mes" onchange="renderCobr()"><option value="2026-08">Agosto 2026</option><option value="2026-07">Julho 2026</option><option value="2026-06">Junho 2026</option><option value="2026-05">Maio 2026</option><option value="2026-04">Abril 2026</option><option value="2026-03">Março 2026</option><option value="2026-02">Fevereiro 2026</option><option value="2026-01">Janeiro 2026</option><option value="2025-12">Dezembro 2025</option><option value="2025-11">Novembro 2025</option><option value="2025-10">Outubro 2025</option><option value="2025-09">Setembro 2025</option><option value="2025-08">Agosto 2025</option><option value="2025-07">Julho 2025</option><option value="2025-06">Junho 2025</option></select>
           <button class="btn btn-primary btn-sm" onclick="gerarCobrancasMes()">⚡ Gerar Cobranças do Mês</button>
         </div>
         <div class="g2" style="margin-bottom:14px">
@@ -566,7 +1017,7 @@ hr{border:none;border-top:1px solid var(--border);margin:16px 0}
       <div class="card-body">
         <div class="month-select">
           <span style="font-size:13px;color:var(--muted2)">Competência:</span>
-          <select id="rel-mes"><option value="2026-04">Abril 2026</option><option value="2026-03">Março 2026</option><option value="2026-02">Fevereiro 2026</option><option value="2026-01">Janeiro 2026</option><option value="2025-12">Dezembro 2025</option><option value="2025-11">Novembro 2025</option><option value="2025-10">Outubro 2025</option><option value="2025-09">Setembro 2025</option><option value="2025-08">Agosto 2025</option><option value="2025-07">Julho 2025</option><option value="2025-06">Junho 2025</option><option value="2025-05">Maio 2025</option></select>
+          <select id="rel-mes"><option value="2026-05">Maio 2026</option><option value="2026-04">Abril 2026</option><option value="2026-03">Março 2026</option><option value="2026-02">Fevereiro 2026</option><option value="2026-01">Janeiro 2026</option><option value="2025-12">Dezembro 2025</option><option value="2025-11">Novembro 2025</option><option value="2025-10">Outubro 2025</option><option value="2025-09">Setembro 2025</option><option value="2025-08">Agosto 2025</option><option value="2025-07">Julho 2025</option><option value="2025-06">Junho 2025</option></select>
         </div>
         <div class="export-area">
           <div class="export-icon">📄</div>
@@ -590,13 +1041,174 @@ hr{border:none;border-top:1px solid var(--border);margin:16px 0}
             <thead><tr><th>#</th><th>Beneficiário</th><th>CPF</th><th>Responsável</th><th>Valor</th><th>Status</th></tr></thead>
             <tbody id="tbl-rel"><tr>
         <td style="color:var(--muted);font-family:&#39;DM Mono&#39;,monospace">1</td>
+        <td><strong>ANITA CARUS PANDOLFO</strong></td>
+        <td style="font-family:&#39;DM Mono&#39;,monospace;font-size:12px">715.567.020-00</td>
+        <td style="font-size:13px">VANDRE LUIS KULCZYNSKI</td>
+        <td style="font-family:&#39;DM Mono&#39;,monospace;color:var(--green)">R$ 19,90</td>
+        <td><span class="badge b-yellow">● Pendente</span></td>
+      </tr><tr>
+        <td style="color:var(--muted);font-family:&#39;DM Mono&#39;,monospace">2</td>
+        <td><strong>Helder Baldissarelli</strong></td>
+        <td style="font-family:&#39;DM Mono&#39;,monospace;font-size:12px">976.370.760-91</td>
+        <td style="font-size:13px">ELOI MAURI RIBAS RUCINSKI</td>
+        <td style="font-family:&#39;DM Mono&#39;,monospace;color:var(--green)">R$ 19,90</td>
+        <td><span class="badge b-yellow">● Pendente</span></td>
+      </tr><tr>
+        <td style="color:var(--muted);font-family:&#39;DM Mono&#39;,monospace">3</td>
+        <td><strong>Suelen Brandelli Rucinski</strong></td>
+        <td style="font-family:&#39;DM Mono&#39;,monospace;font-size:12px">832.047.840-53</td>
+        <td style="font-size:13px">ELOI MAURI RIBAS RUCINSKI</td>
+        <td style="font-family:&#39;DM Mono&#39;,monospace;color:var(--green)">R$ 19,90</td>
+        <td><span class="badge b-yellow">● Pendente</span></td>
+      </tr><tr>
+        <td style="color:var(--muted);font-family:&#39;DM Mono&#39;,monospace">4</td>
+        <td><strong>Olvide Adélia Mella</strong></td>
+        <td style="font-family:&#39;DM Mono&#39;,monospace;font-size:12px">198.723.640-87</td>
+        <td style="font-size:13px">ELOI MAURI RIBAS RUCINSKI</td>
+        <td style="font-family:&#39;DM Mono&#39;,monospace;color:var(--green)">R$ 19,90</td>
+        <td><span class="badge b-yellow">● Pendente</span></td>
+      </tr><tr>
+        <td style="color:var(--muted);font-family:&#39;DM Mono&#39;,monospace">5</td>
+        <td><strong>LUMA ESCALART TOLENTINO SEIXAS</strong></td>
+        <td style="font-family:&#39;DM Mono&#39;,monospace;font-size:12px">091.771.909-39</td>
+        <td style="font-size:13px">MAURICIO SOUZA SEIXAS</td>
+        <td style="font-family:&#39;DM Mono&#39;,monospace;color:var(--green)">R$ 19,90</td>
+        <td><span class="badge b-yellow">● Pendente</span></td>
+      </tr><tr>
+        <td style="color:var(--muted);font-family:&#39;DM Mono&#39;,monospace">6</td>
+        <td><strong>MAURO DALVIM TOLENTINO SEIXAS</strong></td>
+        <td style="font-family:&#39;DM Mono&#39;,monospace;font-size:12px">121.481.749-16</td>
+        <td style="font-size:13px">MAURICIO SOUZA SEIXAS</td>
+        <td style="font-family:&#39;DM Mono&#39;,monospace;color:var(--green)">R$ 19,90</td>
+        <td><span class="badge b-yellow">● Pendente</span></td>
+      </tr><tr>
+        <td style="color:var(--muted);font-family:&#39;DM Mono&#39;,monospace">7</td>
+        <td><strong>LUMA ESCALAT TOLENTINO SEIXAS</strong></td>
+        <td style="font-family:&#39;DM Mono&#39;,monospace;font-size:12px">091.771.909-39</td>
+        <td style="font-size:13px">MAURICIO SOUZA SEIXAS</td>
+        <td style="font-family:&#39;DM Mono&#39;,monospace;color:var(--green)">R$ 19,90</td>
+        <td><span class="badge b-yellow">● Pendente</span></td>
+      </tr><tr>
+        <td style="color:var(--muted);font-family:&#39;DM Mono&#39;,monospace">8</td>
+        <td><strong>MAURO DALVIM TOLENTINO SEIXAS</strong></td>
+        <td style="font-family:&#39;DM Mono&#39;,monospace;font-size:12px">121.481.749-16</td>
+        <td style="font-size:13px">MAURICIO SOUZA SEIXAS</td>
+        <td style="font-family:&#39;DM Mono&#39;,monospace;color:var(--green)">R$ 19,90</td>
+        <td><span class="badge b-yellow">● Pendente</span></td>
+      </tr><tr>
+        <td style="color:var(--muted);font-family:&#39;DM Mono&#39;,monospace">9</td>
+        <td><strong>RENATA CORTEZ</strong></td>
+        <td style="font-family:&#39;DM Mono&#39;,monospace;font-size:12px">062.952.166-25</td>
+        <td style="font-size:13px">JOAO PAULO DE OLIVEIRA AGUIAR</td>
+        <td style="font-family:&#39;DM Mono&#39;,monospace;color:var(--green)">R$ 19,90</td>
+        <td><span class="badge b-yellow">● Pendente</span></td>
+      </tr><tr>
+        <td style="color:var(--muted);font-family:&#39;DM Mono&#39;,monospace">10</td>
+        <td><strong>ROSANGELA MARIA DE OLIVEIRA</strong></td>
+        <td style="font-family:&#39;DM Mono&#39;,monospace;font-size:12px">370.750.476-04</td>
+        <td style="font-size:13px">JOAO PAULO DE OLIVEIRA AGUIAR</td>
+        <td style="font-family:&#39;DM Mono&#39;,monospace;color:var(--green)">R$ 19,90</td>
+        <td><span class="badge b-yellow">● Pendente</span></td>
+      </tr><tr>
+        <td style="color:var(--muted);font-family:&#39;DM Mono&#39;,monospace">11</td>
+        <td><strong>IGOR MARTINEZ OLIVEIRA PEDROSA</strong></td>
+        <td style="font-family:&#39;DM Mono&#39;,monospace;font-size:12px">113.739.726-88</td>
+        <td style="font-size:13px">JOAO PAULO DE OLIVEIRA AGUIAR</td>
+        <td style="font-family:&#39;DM Mono&#39;,monospace;color:var(--green)">R$ 19,90</td>
+        <td><span class="badge b-yellow">● Pendente</span></td>
+      </tr><tr>
+        <td style="color:var(--muted);font-family:&#39;DM Mono&#39;,monospace">12</td>
+        <td><strong>Roselaine Moreira Dipp dos Santos</strong></td>
+        <td style="font-family:&#39;DM Mono&#39;,monospace;font-size:12px">998.475.310-72</td>
+        <td style="font-size:13px">Carlos Roberto Rodrigues Teles</td>
+        <td style="font-family:&#39;DM Mono&#39;,monospace;color:var(--green)">R$ 19,90</td>
+        <td><span class="badge b-yellow">● Pendente</span></td>
+      </tr><tr>
+        <td style="color:var(--muted);font-family:&#39;DM Mono&#39;,monospace">13</td>
+        <td><strong>Valdomario Silva dos Santos</strong></td>
+        <td style="font-family:&#39;DM Mono&#39;,monospace;font-size:12px">210.812.470-53</td>
+        <td style="font-size:13px">Carlos Roberto Rodrigues Teles</td>
+        <td style="font-family:&#39;DM Mono&#39;,monospace;color:var(--green)">R$ 19,90</td>
+        <td><span class="badge b-yellow">● Pendente</span></td>
+      </tr><tr>
+        <td style="color:var(--muted);font-family:&#39;DM Mono&#39;,monospace">14</td>
+        <td><strong>Ana Júlia Dipp Teles</strong></td>
+        <td style="font-family:&#39;DM Mono&#39;,monospace;font-size:12px">066.406.650-00</td>
+        <td style="font-size:13px">Carlos Roberto Rodrigues Teles</td>
+        <td style="font-family:&#39;DM Mono&#39;,monospace;color:var(--green)">R$ 19,90</td>
+        <td><span class="badge b-yellow">● Pendente</span></td>
+      </tr><tr>
+        <td style="color:var(--muted);font-family:&#39;DM Mono&#39;,monospace">15</td>
+        <td><strong>Mauro Dalvim Tolentino Seixas</strong></td>
+        <td style="font-family:&#39;DM Mono&#39;,monospace;font-size:12px">121.481.749-15</td>
+        <td style="font-size:13px">Mauricio souza seixas</td>
+        <td style="font-family:&#39;DM Mono&#39;,monospace;color:var(--green)">R$ 19,90</td>
+        <td><span class="badge b-yellow">● Pendente</span></td>
+      </tr><tr>
+        <td style="color:var(--muted);font-family:&#39;DM Mono&#39;,monospace">16</td>
+        <td><strong>Luma Escalart Tolentino Seixas</strong></td>
+        <td style="font-family:&#39;DM Mono&#39;,monospace;font-size:12px">091.771.909-39</td>
+        <td style="font-size:13px">Mauricio souza seixas</td>
+        <td style="font-family:&#39;DM Mono&#39;,monospace;color:var(--green)">R$ 19,90</td>
+        <td><span class="badge b-yellow">● Pendente</span></td>
+      </tr><tr>
+        <td style="color:var(--muted);font-family:&#39;DM Mono&#39;,monospace">17</td>
+        <td><strong>Luciane De Souza Tolentino Seixas</strong></td>
+        <td style="font-family:&#39;DM Mono&#39;,monospace;font-size:12px">000.286.040-67</td>
+        <td style="font-size:13px">Mauricio souza seixas</td>
+        <td style="font-family:&#39;DM Mono&#39;,monospace;color:var(--green)">R$ 19,90</td>
+        <td><span class="badge b-yellow">● Pendente</span></td>
+      </tr><tr>
+        <td style="color:var(--muted);font-family:&#39;DM Mono&#39;,monospace">18</td>
+        <td><strong>MARISA FERNANDA RODRIGUES DE CASTRO OLIVEIRA</strong></td>
+        <td style="font-family:&#39;DM Mono&#39;,monospace;font-size:12px">457.248.570-49</td>
+        <td style="font-size:13px">CLEIMAR PEREIRA DE OLIVEIRA</td>
+        <td style="font-family:&#39;DM Mono&#39;,monospace;color:var(--green)">R$ 19,90</td>
+        <td><span class="badge b-yellow">● Pendente</span></td>
+      </tr><tr>
+        <td style="color:var(--muted);font-family:&#39;DM Mono&#39;,monospace">19</td>
+        <td><strong>JULIA DE CASTRO SARAÇOL</strong></td>
+        <td style="font-family:&#39;DM Mono&#39;,monospace;font-size:12px">851.570.900-72</td>
+        <td style="font-size:13px">CLEIMAR PEREIRA DE OLIVEIRA</td>
+        <td style="font-family:&#39;DM Mono&#39;,monospace;color:var(--green)">R$ 19,90</td>
+        <td><span class="badge b-yellow">● Pendente</span></td>
+      </tr><tr>
+        <td style="color:var(--muted);font-family:&#39;DM Mono&#39;,monospace">20</td>
+        <td><strong>LOUISE DE OLIVEIRA FERREIRA MALTA</strong></td>
+        <td style="font-family:&#39;DM Mono&#39;,monospace;font-size:12px">110.165.084-25</td>
+        <td style="font-size:13px">FRANCO RIBEIRO MATIAS</td>
+        <td style="font-family:&#39;DM Mono&#39;,monospace;color:var(--green)">R$ 19,90</td>
+        <td><span class="badge b-yellow">● Pendente</span></td>
+      </tr><tr>
+        <td style="color:var(--muted);font-family:&#39;DM Mono&#39;,monospace">21</td>
+        <td><strong>MARIA ONDINA NETTO RIBEIRO</strong></td>
+        <td style="font-family:&#39;DM Mono&#39;,monospace;font-size:12px">353.034.920-87</td>
+        <td style="font-size:13px">FRANCO RIBEIRO MATIAS</td>
+        <td style="font-family:&#39;DM Mono&#39;,monospace;color:var(--green)">R$ 19,90</td>
+        <td><span class="badge b-yellow">● Pendente</span></td>
+      </tr><tr>
+        <td style="color:var(--muted);font-family:&#39;DM Mono&#39;,monospace">22</td>
+        <td><strong>MARIZA RIBEIRO</strong></td>
+        <td style="font-family:&#39;DM Mono&#39;,monospace;font-size:12px">261.739.800-53</td>
+        <td style="font-size:13px">FRANCO RIBEIRO MATIAS</td>
+        <td style="font-family:&#39;DM Mono&#39;,monospace;color:var(--green)">R$ 19,90</td>
+        <td><span class="badge b-yellow">● Pendente</span></td>
+      </tr><tr>
+        <td style="color:var(--muted);font-family:&#39;DM Mono&#39;,monospace">23</td>
+        <td><strong>THAYSE DE OLIVEIRA FERREIRA DORTA</strong></td>
+        <td style="font-family:&#39;DM Mono&#39;,monospace;font-size:12px">047.206.964-06</td>
+        <td style="font-size:13px">FRANCO RIBEIRO MATIAS</td>
+        <td style="font-family:&#39;DM Mono&#39;,monospace;color:var(--green)">R$ 19,90</td>
+        <td><span class="badge b-yellow">● Pendente</span></td>
+      </tr><tr>
+        <td style="color:var(--muted);font-family:&#39;DM Mono&#39;,monospace">24</td>
         <td><strong>Juliani de Campos Schafer</strong></td>
         <td style="font-family:&#39;DM Mono&#39;,monospace;font-size:12px">975.192.600-97</td>
         <td style="font-size:13px">Juliani de Campos Schafer</td>
         <td style="font-family:&#39;DM Mono&#39;,monospace;color:var(--green)">R$ 19,90</td>
         <td><span class="badge b-yellow">● Pendente</span></td>
       </tr><tr>
-        <td style="color:var(--muted);font-family:&#39;DM Mono&#39;,monospace">2</td>
+        <td style="color:var(--muted);font-family:&#39;DM Mono&#39;,monospace">25</td>
         <td><strong>Eu</strong></td>
         <td style="font-family:&#39;DM Mono&#39;,monospace;font-size:12px">727.488.949-99</td>
         <td style="font-size:13px">Eu</td>
@@ -605,7 +1217,7 @@ hr{border:none;border-top:1px solid var(--border);margin:16px 0}
       </tr></tbody>
           </table>
         </div>
-        <div style="margin-top:10px;font-size:12px;color:var(--muted);font-family:&#39;DM Mono&#39;,monospace" id="rel-summary">2 beneficiário(s) · Total mensal: R$ 39,80</div>
+        <div style="margin-top:10px;font-size:12px;color:var(--muted);font-family:&#39;DM Mono&#39;,monospace" id="rel-summary">25 beneficiário(s) · Total mensal: R$ 497,50</div>
       </div>
     </div>
   </div>
@@ -712,6 +1324,77 @@ hr{border:none;border-top:1px solid var(--border);margin:16px 0}
 // ══════════════════════════════════════════
 const JSONBIN_KEY = '$2a$10$edm.kBGStd5r5AYCTRxJ.u5qwXwwjwaOj4BfGd0NDabbknXpuvsTW';
 const JSONBIN_BIN = '69e1208faaba8821970802c3';
+const ASAAS_KEY  = 'b0f32b08-f193-434b-9ca0-3178f329ce14';
+const ASAAS_URL  = 'https://api.asaas.com/v3';
+
+// ── ASAAS: Cria cliente ──
+async function asaascriarCliente(sind) {
+  const cpf = sind.cpf.replace(/\D/g,'');
+
+  // 1. Verifica se já existe cliente com esse CPF no Asaas
+  const busca = await fetch(`${ASAAS_URL}/customers?cpfCnpj=${cpf}`, {
+    headers: { 'access_token': ASAAS_KEY }
+  });
+  const buscaData = await busca.json();
+  if(buscaData.data && buscaData.data.length > 0) {
+    // Cliente já existe — retorna o ID existente
+    return buscaData.data[0].id;
+  }
+
+  // 2. Não existe — cria novo
+  const res = await fetch(`${ASAAS_URL}/customers`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json', 'access_token': ASAAS_KEY },
+    body: JSON.stringify({
+      name: sind.nome,
+      cpfCnpj: cpf,
+      mobilePhone: sind.tel.replace(/\D/g,''),
+      email: sind.email || undefined,
+      externalReference: String(sind.id)
+    })
+  });
+  const data = await res.json();
+  if(!res.ok) throw new Error(data.errors?.[0]?.description || 'Erro ao criar cliente no Asaas');
+  return data.id;
+}
+
+// ── ASAAS: Gera cobrança PIX ou boleto ──
+async function asaasGerarCobranca(customerId, valor, vencimento, descricao, tipo='PIX') {
+  const billingType = tipo === 'PIX' ? 'PIX' : 'BOLETO';
+  const res = await fetch(`${ASAAS_URL}/payments`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json', 'access_token': ASAAS_KEY },
+    body: JSON.stringify({
+      customer: customerId,
+      billingType,
+      value: valor,
+      dueDate: vencimento,
+      description: descricao,
+      externalReference: descricao
+    })
+  });
+  const data = await res.json();
+  if(!res.ok) throw new Error(data.errors?.[0]?.description || 'Erro ao gerar cobrança no Asaas');
+  return data;
+}
+
+// ── ASAAS: Busca QR Code PIX ──
+async function asaasBuscarPixQR(paymentId) {
+  const res = await fetch(`${ASAAS_URL}/payments/${paymentId}/pixQrCode`, {
+    headers: { 'access_token': ASAAS_KEY }
+  });
+  const data = await res.json();
+  return data;
+}
+
+// ── ASAAS: Busca linha digitável do boleto ──
+async function asaasBuscarBoleto(paymentId) {
+  const res = await fetch(`${ASAAS_URL}/payments/${paymentId}/identificationField`, {
+    headers: { 'access_token': ASAAS_KEY }
+  });
+  const data = await res.json();
+  return data;
+}
 let DB = JSON.parse(localStorage.getItem('sinprf_db') || '{"sindicalizados":[],"cobrancas":[],"config":{}}');
 DB.sindicalizados = DB.sindicalizados || [];
 DB.cobrancas = DB.cobrancas || [];
@@ -1254,26 +1937,71 @@ function downloadCSV(content, filename) {
 // ══════════════════════════════════════════
 //  COBRANÇA MODAL
 // ══════════════════════════════════════════
-function abrirCobranca(s) {
+async function abrirCobranca(s) {
   sindSelecionado = s;
   const cfg = getConfig();
   document.getElementById('mc-title').textContent = s.forma==='boleto'?'COBRANÇA BOLETO':'COBRANÇA PIX';
   document.getElementById('mc-desc').textContent = `${s.nome} · ${s.familiares.length} familiar(es) · ${MESES[new Date().getMonth()]}`;
   document.getElementById('mc-valor').textContent = 'R$ ' + s.valor.toFixed(2).replace('.',',');
-
-  if (s.forma==='boleto') {
-    document.getElementById('mc-pix').style.display='none';
-    document.getElementById('mc-boleto').style.display='block';
-    const venc = new Date(); venc.setDate(venc.getDate()+5);
-    document.getElementById('mc-boleto-venc').textContent = venc.toLocaleDateString('pt-BR');
-    document.getElementById('mc-boleto-ref').textContent = `SINPRF-${s.id}`;
-  } else {
-    document.getElementById('mc-pix').style.display='block';
-    document.getElementById('mc-boleto').style.display='none';
-    const chave = cfg.pix || '[Configure a chave PIX em ⚙️ Config]';
-    document.getElementById('mc-chave').textContent = `🔑 ${chave}`;
-  }
+  document.getElementById('mc-pix').style.display='block';
+  document.getElementById('mc-boleto').style.display='none';
+  document.getElementById('mc-chave').innerHTML = '⏳ Gerando cobrança no Asaas...';
   openModal('modal-cobr');
+
+  try {
+    // 1. Cria cliente no Asaas se ainda não tiver ID
+    let customerId = s.asaasId || null;
+    if(!customerId) {
+      customerId = await asaascriarCliente(s);
+      const idx = DB.sindicalizados.findIndex(x=>x.id===s.id);
+      if(idx>=0) { DB.sindicalizados[idx].asaasId = customerId; salvarDB(); }
+    }
+
+    // 2. Define vencimento
+    const hoje = new Date();
+    const venc = new Date(hoje.getFullYear(), hoje.getMonth(), s.venc||10);
+    if(venc <= hoje) venc.setMonth(venc.getMonth()+1);
+    const vencStr = venc.toISOString().split('T')[0];
+    const descricao = `Telemedicina Familiar SINPRF/RS - ${MESES[hoje.getMonth()]} ${hoje.getFullYear()}`;
+
+    // 3. Gera cobrança
+    const tipo = s.forma==='boleto' ? 'BOLETO' : 'PIX';
+    const pagamento = await asaasGerarCobranca(customerId, s.valor, vencStr, descricao, tipo);
+    sindSelecionado._paymentId = pagamento.id;
+    sindSelecionado._paymentUrl = pagamento.invoiceUrl;
+
+    if(s.forma==='boleto') {
+      document.getElementById('mc-pix').style.display='none';
+      document.getElementById('mc-boleto').style.display='block';
+      document.getElementById('mc-boleto-venc').textContent = venc.toLocaleDateString('pt-BR');
+      try {
+        const bol = await asaasBuscarBoleto(pagamento.id);
+        document.getElementById('mc-boleto-ref').textContent = bol.identificationField || pagamento.id;
+      } catch(e) { document.getElementById('mc-boleto-ref').textContent = pagamento.id; }
+      if(pagamento.bankSlipUrl) {
+        document.getElementById('mc-boleto-ref').insertAdjacentHTML('afterend',
+          `<a href="${pagamento.bankSlipUrl}" target="_blank" style="display:block;margin-top:8px;color:#388bfd;font-size:12px">📄 Abrir/imprimir boleto</a>`);
+      }
+    } else {
+      document.getElementById('mc-pix').style.display='block';
+      try {
+        const qr = await asaasBuscarPixQR(pagamento.id);
+        let html = '';
+        if(qr.encodedImage) html += `<img src="data:image/png;base64,${qr.encodedImage}" style="width:180px;height:180px;border-radius:8px;background:#fff;padding:4px;display:block;margin:8px auto">`;
+        if(qr.payload) {
+          pixChaveAtual = qr.payload;
+          html += `<div onclick="navigator.clipboard.writeText('${qr.payload}').then(()=>notif('✅ Código PIX copiado!'))" style="font-size:11px;color:var(--muted2);word-break:break-all;margin-top:6px;cursor:pointer;padding:8px;background:var(--cinza-painel);border-radius:6px">🔑 Clique para copiar o código PIX</div>`;
+        }
+        document.getElementById('mc-chave').innerHTML = html || `🔑 ${cfg.pix||'[PIX não configurado]'}`;
+      } catch(e) {
+        document.getElementById('mc-chave').textContent = `🔑 ${cfg.pix||'[Configure a chave PIX em ⚙️ Config]'}`;
+      }
+    }
+  } catch(err) {
+    const chave = getConfig().pix || '[Configure a chave PIX em ⚙️ Config]';
+    document.getElementById('mc-chave').textContent = `⚠️ ${err.message} · PIX manual: ${chave}`;
+    console.error('Asaas:', err);
+  }
 }
 
 function abrirCobrancaId(cobrId) {
